@@ -19,242 +19,122 @@
                     <li>
                         <button class="navbar-toggler" onclick="toogleLabels()"><span><i class="fa fa-bars fa-1x"></i></span></button>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link"><i class="fa fa-user-o fa-lg"></i><span
-                                class="collapse" name="linkLabel">Client</span></a>
+                        <a class="nav-link"><i class="fa fa-user-o fa-lg"></i><span class="collapse" name="linkLabel">Client</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"><i class="fa fa-exchange fa-lg"></i><span
-                                class="collapse" name="linkLabel">Interaction</span></a>
+                        <a class="nav-link"><i class="fa fa-exchange fa-lg"></i><span class="collapse" name="linkLabel">Interaction</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"><i class="fa fa-bullhorn fa-lg"></i><span
-                                class="collapse" name="linkLabel">Service request</span></a>
+                        <a class="nav-link"><i class="fa fa-bullhorn fa-lg"></i><span class="collapse" name="linkLabel">Service
+                                request</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"><i class="fa fa-history fa-lg"></i><span
-                                class="collapse" name="linkLabel">Client history</span></a>
+                        <a class="nav-link"><i class="fa fa-history fa-lg"></i><span class="collapse" name="linkLabel">Client
+                                history</span></a>
                     </li>
-
-
-                   
-
-
                 </ul>
             </div>
 
             <div class="col">
-                <div class="mt-1">
-                    <button class="btn btn-outline-danger btn-sm" type="button">
-                        Complete and Update
-                    </button>
-                </div>
-
-                <div class="row mt-2">
-                        <div class="col-md-6">
-                          <div class="card shadow">
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card shadow">
                             <div class="card-body">
-                              <!-- <h4 id="dealing-with-specificity">Client Verification</h4> -->
-                      
-                              <div class="row mb-1">
-                                <div class="col-8 col-sm-5 col-md-6 col-lg-4">
-                                  <label class="text-muted" for="clientId">Client ID</label>
-                                  <!-- <div class="text-danger fs-14" *ngIf="requireIdError">
-                                    Client Id is required.
-                                  </div>
-                                  <div class="text-danger fs-14" *ngIf="noClientError">
-                                    Client not found.
-                                  </div>
-                                  <div class="text-danger fs-14" *ngIf="verifyMessage">
-                                    {{verifyMessage}}
-                                  </div> -->
-                                  <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control rounded-right" name="clientId" id="clientId" [(ngModel)]="clientVerification.clientId">
-                                  </div>
-                                </div>
-                                <div class="col-8 col-sm-5 col-md-6 col-lg-4 align-self-end">
-                                  <label class="text-muted" for="clientId">Policy number</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control rounded-right" name="policyNumber" id="policyNumber" [(ngModel)]="clientVerification.policyNumber">
-                                  </div>
-                                </div>
-                                <div class="col-sm-2 col-4 align-self-end" id="buttonContainer">
-                                  <button (click)="getClient(clientVerification.clientId, clientVerification.policyNumber)" class="btn btn-outline-success btn-sm"
-                                    type="button">Search
-                                    client</button>
-                                </div>
-                              </div>
-                      
-                              <!--         <div class="row mb-1">
-                                <div class="col-12 col-sm-5 col-md-6 col-lg-4">
-                                  <label for="policyNumber">Policy Number</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control rounded-right" id="policyNumber" [(ngModel)]="clientVerification.policyNumber"
-                                      value required>
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    Policy Number is required.
-                                  </div>
-                                </div>
-                                <div class="col-12 col-sm-5 col-md-6 col-lg-4">
-                                  <label class="text-muted" for="policyType">Policy Type</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control rounded-right" id="policyType" [(ngModel)]="clientVerification.policyType"
-                                      value required>
-                      
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    policyType is required.
-                                  </div>
-                                </div>
-                              </div> -->
-                              <div class="row mb-1">
-                                <div class="col-12 col-sm-5 col-md-6 col-lg-4">
-                                  <label for="clientFirstName">First Name</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control rounded-right" id="clientFirstName" [(ngModel)]="clientVerification.clientFirstName"
-                                      value required>
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    ClientFirstName is required.
-                                  </div>
-                                </div>
-                                <div class="col-12 col-sm-5 col-md-6 col-lg-4">
-                                  <label for="clientMiddleName">Middle Name</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control rounded-right" id="clientMiddleName" [(ngModel)]="clientVerification.clientMiddleName"
-                                      value required>
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    ClientFirstName is required.
-                                  </div>
-                                </div>
-                                <div class="col-12 col-sm-5 col-md-6 col-lg-4">
-                                  <label for="clientLastName">Last Name</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control rounded-right" id="clientLastName" [(ngModel)]="clientVerification.clientLastName"
-                                      value required>
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    clientLastName is required.
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row mb-1">
-                                <div class="col-12 col-sm-5 col-md-6 col-lg-4">
-                                  <label class="text-muted" for="address">Address</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control rounded-right" id="address" [(ngModel)]="clientVerification.address"
-                                      value required>
-                      
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    Address is required.
-                                  </div>
-                                </div>
-                                <div class="col-12 col-sm-5 col-md-6 col-lg-4">
-                                  <label class="text-muted" for="city">City</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control rounded-right" id="city" [(ngModel)]="clientVerification.city"
-                                      value required>
-                      
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    City is required.
-                                  </div>
-                                </div>
-                                <div class="col-12 col-sm-5 col-md-6 col-lg-4">
-                                  <label class="text-muted" for="country">Country</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control rounded-right" id="country" [(ngModel)]="clientVerification.country"
-                                      value required>
-                      
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    country is required.
-                                  </div>
-                                </div>
-                              </div>
-                      
-                              <div class="row mb-1">
-                                <div class="col-12 col-sm-5 col-md-8 col-lg-4">
-                                  <label class="text-muted" for="phone">Phone</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control rounded-right" id="phone" [(ngModel)]="clientVerification.clientPhone"
-                                      value required>
-                      
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    phone is required.
-                                  </div>
-                                </div>
-                      
-                                <div class="col-12 col-sm-5 col-md-8 col-lg-4">
-                                  <label class="text-muted" for="email">Email</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control rounded-right" id="email" [(ngModel)]="clientVerification.clientEmail"
-                                      value required>
-                      
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    email is required.
-                                  </div>
-                                </div>
-                              </div>
-                              <!--         <div class="row mb-1">
-                                <div class="col-12 col-sm-5 col-md-7 col-lg-4">
-                                  <label class="text-muted" for="policyStartDate">Policy Start Date</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="date" class="form-control rounded-right" id="policyStartDate" [(ngModel)]="clientVerification.policyStartDate"
-                                      value required>
-                      
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    PolicyStartDate is required.
-                                  </div>
-                                </div>
-                      
-                                <div class="col-12 col-sm-5 col-md-7 col-lg-4 ">
-                                  <label class="text-muted" for="policyEndDate">Policy End Date</label>
-                                  <div class="input-group input-group-sm">
-                                    <input type="date" class="form-control rounded-right" id="policyEndDate" [(ngModel)]="clientVerification.policyEndDate"
-                                      value required>
-                      
-                                  </div>
-                                  <div class="invalid-feedback">
-                                    policyEndDate is required.
-                                  </div>
-                                </div>
-                              </div> -->
-                              <!--         <div class="row mb-1">
-                                <div class="col-12 col-sm-5 col-md-8 col-lg-4">
-                                    <label class="text-muted" for="wrapUp">Wrap Up</label>
-                                    <div class="input-group input-group-sm">
-                                        <select class="form-control rounded-right" id="wrapUp" name="wrapUp" [(ngModel)]="clientVerification.wrapUp">
-                                            <option *ngFor="let summary of wrapUpList" value={{summary}}>
-                                                {{summary}}
-                                            </option>
-                                        </select>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5>Name</h5>
                                     </div>
-                                  </div>
-                                  <div class="col-sm-2 col-4 align-self-end" id="buttonCompleteContainer">
-                                      <button (click)="verify()" class="btn btn-outline-danger btn-sm" type="button">Complete and Update</button>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-8 col-sm-5 col-md-6 col-lg-4">
+                                        <label class="text-muted" for="clientId">Title</label>
+                                        <div class="input-group input-group-sm">
+                                            <select type="text" class="form-control rounded-right">
+                                                <option></option>
+                                                <option>Title1</option>
+                                                <option>Title2</option>
+                                                <option>Title3</option>
+                                            </select>
+                                        </div>
                                     </div>
-                              </div> -->
-                      
+                                    <div class="col-8 col-sm-5 col-md-6 col-lg-4 align-self-end">
+                                        <label class="text-muted" for="clientId">Name</label>
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control rounded-right" name="policyNumber"
+                                                id="policyNumber" [(ngModel)]="clientVerification.policyNumber">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5>Search terms</h5>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-12 col-sm-5 col-md-6 col-lg-4">
+                                        <label for="clientFirstName">Search term 1/2</label>
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control rounded-right" id="clientFirstName">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5>Street address</h5>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-1">
+                                    <div class="col-12 col-sm-5 col-md-6 col-lg-4">
+                                        <label class="text-muted" for="address">Street/House number</label>
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control rounded-right" id="address">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-sm-5 col-md-6 col-lg-4">
+                                        <label class="text-muted" for="city">Postal code/City</label>
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control rounded-right" id="city">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-sm-5 col-md-6 col-lg-4">
+                                        <label class="text-muted" for="country">Country</label>
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control rounded-right" id="country">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-1">
+                                    <div class="col-12 col-sm-5 col-md-8 col-lg-4">
+                                        <label class="text-muted" for="phone">Region</label>
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control rounded-right" id="phone">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-sm-5 col-md-8 col-lg-4">
+                                        <label class="text-muted" for="email">Transportation zone</label>
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control rounded-right" id="email">
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                          </div>
                         </div>
-                      
-                        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
-                      </div>
-                      
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
 </body>
 
 </html>
@@ -265,5 +145,4 @@
         let spanText = document.getElementsByName('linkLabel');
         spanText.forEach(el => el.className = visibility == true ? 'collapse.show' : 'collapse');
     }
-    //let navItem=
 </script>

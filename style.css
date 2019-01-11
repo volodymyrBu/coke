@@ -68,7 +68,7 @@ html,body,.container-fluid, .stretch {
   .shadow{
     box-shadow: 0 8px 35px rgba(29,29,31,.15);
      border-left-width: .25rem;
-     border-left-color: #2ca2db;
+     border-left-color: #f40000;
   }
   
   label {
