@@ -52,10 +52,7 @@
                                         <label class="text-muted" for="clientId">Title</label>
                                         <div class="input-group input-group-sm">
                                             <select type="text" class="form-control rounded-right">
-                                                <option></option>
-                                                <option>Title1</option>
-                                                <option>Title2</option>
-                                                <option>Title3</option>
+                                                <option>Mr.</option>
                                             </select>
                                         </div>
                                     </div>
@@ -63,7 +60,7 @@
                                         <label class="text-muted" for="clientId">Name</label>
                                         <div class="input-group input-group-sm">
                                             <input type="text" class="form-control rounded-right" name="policyNumber"
-                                                id="policyNumber" [(ngModel)]="clientVerification.policyNumber">
+                                                id="policyNumber" value="Demo Customer">
                                         </div>
                                     </div>
                                 </div>
@@ -78,7 +75,8 @@
                                     <div class="col-12 col-sm-5 col-md-6 col-lg-4">
                                         <label for="clientFirstName">Search term 1/2</label>
                                         <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control rounded-right" id="clientFirstName">
+                                            <input type="text" class="form-control rounded-right" id="clientFirstName"
+                                                value="DC">
                                         </div>
                                     </div>
                                 </div>
@@ -88,26 +86,27 @@
                                         <h5>Street address</h5>
                                     </div>
                                 </div>
+                                <div class="row mb-1">
+                                    <div class="col-12 col-sm-5 col-md-6 col-lg-8">
+                                        <label class="text-muted" for="address">Street/House number</label>
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control rounded-right" id="address" value="298 Hamburger Strasse, Frankfurt Sud">
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="row mb-1">
                                     <div class="col-12 col-sm-5 col-md-6 col-lg-4">
-                                        <label class="text-muted" for="address">Street/House number</label>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control rounded-right" id="address">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12 col-sm-5 col-md-6 col-lg-4">
                                         <label class="text-muted" for="city">Postal code/City</label>
                                         <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control rounded-right" id="city">
+                                            <input type="text" class="form-control rounded-right" id="city" value="Frankfurt">
                                         </div>
                                     </div>
 
                                     <div class="col-12 col-sm-5 col-md-6 col-lg-4">
                                         <label class="text-muted" for="country">Country</label>
                                         <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control rounded-right" id="country">
+                                            <input type="text" class="form-control rounded-right" id="country" value="DE">
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +122,7 @@
                                     <div class="col-12 col-sm-5 col-md-8 col-lg-4">
                                         <label class="text-muted" for="email">Transportation zone</label>
                                         <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control rounded-right" id="email">
+                                            <input type="text" class="form-control rounded-right" id="email" value="0000000001">
                                         </div>
                                     </div>
                                 </div>
