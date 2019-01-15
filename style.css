@@ -80,5 +80,10 @@ html,body,.container-fluid, .stretch {
   .fs-14{
    font-size: 14px;
   }
+
+  .fullHeiht{
+    height: 100%;
+  }
+  
   
   
