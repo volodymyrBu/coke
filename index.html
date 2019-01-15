@@ -154,7 +154,13 @@
                                             <label class="text-muted" for="wrapUpCode">WrapUpCode</label>
                                             <select class="form-control" name="wrapUpCode" id="wrapUpCode">
                                                 <option>
-
+                                                    code1
+                                                </option>
+                                                <option>
+                                                    code2
+                                                </option>
+                                                <option>
+                                                    code3
                                                 </option>
                                             </select>
                                         </div>
@@ -396,14 +402,15 @@
         spanText.forEach(el => el.className = visibility == true ? 'collapse.show' : 'collapse');
     }
 
-    var views = document.getElementsByClassName('col');
+    let views = document.getElementsByClassName('col');
+
     let greenMile = document.getElementById('greenMile');
     let client = document.getElementById('client');
     let interaction = document.getElementById('interaction');
     let serviceRequest = document.getElementById('serviceRequest');
     let clientHistory = document.getElementById('clientHistory');
     const show = 'col show';
-    const collapse = 'collapse';
+    const collapse = 'col collapse';
 
     function showGreenMile() {
         for (var i = 0; i < views.length; i++) {
